@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import NewMovie from "./components/NewMovie.js";
+import "./routes/App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+  state = {
+    heroMovies : [],
+    newMovies : [],
+    suggestMovies : []
+  };
+
+  async getNewMovies(){
+    const newMovies = await fetch("https://elorri.fr/api/disney-plus/movies").then(response => response.json());
+
+    this.setState({
+      newMovies: newMovies
+    });
+  }
+
+  componentDidMount() {
+    this.getNewMovies();
+  }
+  render() {
+    const listNewMovies = this.state.newMovies.map((movie, index) => {
+      return (
+        <NewMovie key={movie.id} img={movie.poster}/>
+      )
+    })
+    return (
+      <div className="container">
+        <header><img src="logo.png" alt="" srcset=""/></header>
+        <div className="new">{listNewMovies}</div>
+      </div>
+    )
+  }
 }
-
-export default App;
