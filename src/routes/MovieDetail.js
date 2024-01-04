@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "../routes/MovieDetail.css";
 import { Tag } from 'antd';
-import { Link } from 'react-router-dom/cjs/react-router-dom.js';
 
 export default class MovieDetail extends Component {
     state = {

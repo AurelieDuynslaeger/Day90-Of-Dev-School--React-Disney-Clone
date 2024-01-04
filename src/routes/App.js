@@ -1,15 +1,16 @@
 import { Component } from "react";
 import NewMovie from "../components/NewMovie.js";
 import "../routes/App.css";
-import { Image } from "antd";
 import SuggestMovie from "../components/SuggestMovie.js";
+import { Link } from "react-router-dom/cjs/react-router-dom.js";
 
 export default class App extends Component {
 
   state = {
     heroMovies : [],
     newMovies : [],
-    suggestMovies : []
+    suggestMovies : [], 
+    companyMovies:[]
   };
 
   async getNewMovies(){
@@ -28,6 +29,7 @@ export default class App extends Component {
     })
   }
 
+
   componentDidMount() {
     this.getNewMovies();
     this.getSuggestMovies();
@@ -45,6 +47,8 @@ export default class App extends Component {
         <SuggestMovie key={movie.id} id={movie.id} img={movie.poster}/>
       )
     });
+
+    
     return (
       <div className="container">
         <header>
@@ -55,35 +59,23 @@ export default class App extends Component {
         </div>
         <div className="studios">
           <div className="studio">
-            <Image
-              width={150}
-              src="img\companies\logo-disney.png"
-            />
+            <Link to={`/company/`}>
+              <img src="img\companies\logo-disney.png" alt="" srcset="" />
+              </Link>
           </div>
           <div className="studio">
-            <Image
-              width={150}
-              src="img\companies\logo-pixar.png"
-            />
+            <img src="img\companies\logo-marvel.png" alt="" srcset="" />
           </div>
           <div className="studio">
-            <Image
-              width={150}
-              src="img\companies\logo-marvel.png"
-            />
+            <img src="img\companies\logo-pixar.png" alt="" srcset="" />
           </div>
           <div className="studio">
-            <Image
-              width={150}
-              src="img\companies\logo-starwars.png"
-            />
+            <img src="img\companies\logo-starwars.png" alt="" srcset="" />
           </div>
           <div className="studio">
-            <Image
-              width={150}
-              src="img\companies\logo-nationalgeographic.png"
-            />
+            <img src="img\companies\logo-nationalgeographic.png" alt="" srcset="" />
           </div>
+          
         </div>
         <div className="new">
           <h3>Nouveautés</h3>
