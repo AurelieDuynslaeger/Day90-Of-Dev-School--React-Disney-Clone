@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import "../routes/MovieDetail.css";
+import "../routes/Details.css";
+import "../routes/App.css";
 import { Tag } from 'antd';
 import { Header } from '../components/Header.js';
 
@@ -23,6 +24,7 @@ componentDidMount(){
   render() {
     return (
       <div className="container">
+
         <Header/>
     
         <div className="movie-detail">

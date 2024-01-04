@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import "../routes/StudioDetail.css";
+import "../routes/Details.css";
+import "../routes/App.css";
 import { Header } from '../components/Header.js';
 
 export default class StudioDetail extends Component {
