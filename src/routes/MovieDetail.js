@@ -25,7 +25,7 @@ componentDidMount(){
       <div className="container">
       <header>
         <img src="public\img\logo.png" alt="" srcset="" />
-        </header>
+      </header>
         <div className="movie-detail">
             <div className="movie-cover">
                 <img src={this.state.movie.poster} alt="" />

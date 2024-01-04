@@ -20,7 +20,7 @@ header {
 
 .studio {
   padding: 20px;
-  border: 1px solid whitesmoke;
+  border: 0.5px solid whitesmoke;
   border-radius: 25px;
   height: 10vh;
   box-shadow: whitesmoke;
@@ -33,10 +33,15 @@ header {
 
 }
 
-.new-movies, .suggest-movies {
+h3 {
+  color: whitesmoke;
+}
+
+.movie {
+  list-style: none;
   display: flex;
 }
 
 .new-movies img, .suggest-movies img{
-  width: 50%;
+  width: 90%;
 }

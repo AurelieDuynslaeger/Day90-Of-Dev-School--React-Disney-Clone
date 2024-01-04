@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.js'
 
-export const SuggestMovie = ({img}) => {
+export const SuggestMovie = ({id, img}) => {
   return (
-    <div><img src={img} alt="" srcset="" /></div>
+    <Link to={`/movie/${id}`}><li><img src={img} alt="" srcset="" /></li></Link>
   )
 }
 

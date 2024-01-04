@@ -33,32 +33,14 @@ export default class App extends Component {
     this.getSuggestMovies();
   }
 
-  //Trouver tout les animaux provenant d'Afrique
-// const findAfrique = zoo.filter(item => {
-//   return item.continent === "Afrique";
-// });
-
-// const listNewMovies = this.state.newMovies.filter(index => index<7 {
-//   return (
-//     <NewMovie key={movie.id} img={movie.poster}/>
-//   )
-// });
-
-
   render() {
-    const listNewMovies = this.state.newMovies.map((movie, index) => {
+    const listNewMovies = this.state.newMovies.slice(0,6).map((movie, index) => {
       return (
         <NewMovie key={movie.id} id={movie.id} img={movie.poster}/>
       )
     });
 
-    // const listNewMovies = this.state.newMovies.filter(index => index<7 {
-//   return (
-//     <NewMovie key={movie.id} img={movie.poster}/>
-//   )
-// });
-
-    const listSuggest = this.state.suggestMovies.map((movie, index) => {
+    const listSuggest = this.state.suggestMovies.slice(0,3).map((movie, index) => {
       return (
         <SuggestMovie key={movie.id} id={movie.id} img={movie.poster}/>
       )
@@ -114,7 +96,9 @@ export default class App extends Component {
         <div className="suggest">
           <h3>Suggestions</h3>
           <div className="suggest-movies">
-            {listSuggest}
+            <div className="movie">
+              {listSuggest}
+            </div>
           </div>
         </div>
       </div>
