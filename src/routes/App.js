@@ -1,7 +1,7 @@
 import { Component } from "react";
 import NewMovie from "../components/NewMovie.js";
 import "../routes/App.css";
-import { Card, Image } from "antd";
+import { Image } from "antd";
 import SuggestMovie from "../components/SuggestMovie.js";
 
 export default class App extends Component {
@@ -33,59 +33,82 @@ export default class App extends Component {
     this.getSuggestMovies();
   }
 
+  //Trouver tout les animaux provenant d'Afrique
+// const findAfrique = zoo.filter(item => {
+//   return item.continent === "Afrique";
+// });
+
+// const listNewMovies = this.state.newMovies.filter(index => index<7 {
+//   return (
+//     <NewMovie key={movie.id} img={movie.poster}/>
+//   )
+// });
+
+
   render() {
     const listNewMovies = this.state.newMovies.map((movie, index) => {
       return (
-        <NewMovie key={movie.id} img={movie.poster}/>
+        <NewMovie key={movie.id} id={movie.id} img={movie.poster}/>
       )
     });
 
+    // const listNewMovies = this.state.newMovies.filter(index => index<7 {
+//   return (
+//     <NewMovie key={movie.id} img={movie.poster}/>
+//   )
+// });
+
     const listSuggest = this.state.suggestMovies.map((movie, index) => {
       return (
-        <SuggestMovie key={movie.id} img={movie.poster}/>
+        <SuggestMovie key={movie.id} id={movie.id} img={movie.poster}/>
       )
     });
     return (
       <div className="container">
         <header>
-          <img src="logo.png" alt="" srcset=""/>
+          <img src="img\logo.png" alt="" srcset=""/>
         </header>
         <div className="carousel">
           {/* <Carousel></Carousel> */}
         </div>
         <div className="studios">
-          <Image
-            width={250}
-            src="logo-disney.png"
-          />
-          <Card style={{ 
-            width:250,
-            height: 150,}}
-            cover={<img alt="logo " src="logo-disney.png" />} 
-          ></Card>
-          <Card style={{ 
-            width:250,
-            height: 150,
-          }}>
-            <img src="" alt="" srcset="" />
-          </Card>
-          <Card style={{ 
-            width:250,
-            height: 150,
-          }}>
-            <img src="" alt="" srcset="" />
-          </Card>
-          <Card style={{ 
-            width:250,
-            height: 150,
-          }}>
-            <img src="" alt="" srcset="" />
-          </Card>
+          <div className="studio">
+            <Image
+              width={150}
+              src="img\companies\logo-disney.png"
+            />
+          </div>
+          <div className="studio">
+            <Image
+              width={150}
+              src="img\companies\logo-pixar.png"
+            />
+          </div>
+          <div className="studio">
+            <Image
+              width={150}
+              src="img\companies\logo-marvel.png"
+            />
+          </div>
+          <div className="studio">
+            <Image
+              width={150}
+              src="img\companies\logo-starwars.png"
+            />
+          </div>
+          <div className="studio">
+            <Image
+              width={150}
+              src="img\companies\logo-nationalgeographic.png"
+            />
+          </div>
         </div>
         <div className="new">
           <h3>Nouveautés</h3>
           <div className="new-movies">
-            {listNewMovies}
+            <div className="movie">
+              {listNewMovies}
+            </div>
           </div>
         </div>
         <div className="suggest">

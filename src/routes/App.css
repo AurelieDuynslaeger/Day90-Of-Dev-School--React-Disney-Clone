@@ -4,26 +4,39 @@
 }
 
 header img {
-  width: 20%;
-  margin: auto;
+  width: 15%;
+}
+header {
+  text-align: center;
 }
 
 .studios {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  align-items: center;
+  margin:50px 0;
 }
+
+.studio {
+  padding: 20px;
+  border: 1px solid whitesmoke;
+  border-radius: 25px;
+  height: 10vh;
+  box-shadow: whitesmoke;
+}
+
 .new, .suggest {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  margin:50px 0;
+
 }
 
 .new-movies, .suggest-movies {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .new-movies img, .suggest-movies img{
-  width: 25%;
+  width: 50%;
 }
