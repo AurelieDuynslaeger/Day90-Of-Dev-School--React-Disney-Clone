@@ -2,6 +2,7 @@ import { Component } from "react";
 import NewMovie from "../components/NewMovie.js";
 import "../routes/App.css";
 import SuggestMovie from "../components/SuggestMovie.js";
+import { Header } from "../components/Header.js";
 
 
 export default class App extends Component {
@@ -10,7 +11,6 @@ export default class App extends Component {
     heroMovies : [],
     newMovies : [],
     suggestMovies : [], 
-    companyMovies:[]
   };
 
   async getNewMovies(){
@@ -29,10 +29,18 @@ export default class App extends Component {
     })
   }
 
+  async getHeroMovies (){
+    const carouselMovies = await fetch("https://elorri.fr/api/disney-plus/movies").then(response => response.json());
+
+    this.setState({
+      heroMovies: carouselMovies
+    })
+  }
 
   componentDidMount() {
     this.getNewMovies();
     this.getSuggestMovies();
+    this.getHeroMovies();
   }
 
   render() {
@@ -44,18 +52,15 @@ export default class App extends Component {
 
     const listSuggest = this.state.suggestMovies.slice(0,3).map((movie, index) => {
       return (
-        <SuggestMovie key={movie.id} id={movie.id} img={movie.poster}/>
+        <SuggestMovie key={movie.id} id={movie.id} img={movie.cover}/>
       )
     });
 
-    
+  
     return (
       <div className="container">
-        <header>
-          <img src="img\logo.png" alt="" srcset=""/>
-        </header>
+        <Header/>
         <div className="carousel">
-          {/* <Carousel></Carousel> */}
         </div>
         <div className="studios">
           <div className="studio">

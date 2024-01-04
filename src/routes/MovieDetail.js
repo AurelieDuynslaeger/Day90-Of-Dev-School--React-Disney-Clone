@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../routes/MovieDetail.css";
 import { Tag } from 'antd';
+import { Header } from '../components/Header.js';
 
 export default class MovieDetail extends Component {
     state = {
@@ -22,9 +23,8 @@ componentDidMount(){
   render() {
     return (
       <div className="container">
-      <header>
-        <img src="public\img\logo.png" alt="" srcset="" />
-      </header>
+        <Header/>
+    
         <div className="movie-detail">
             <div className="movie-cover">
                 <img src={this.state.movie.poster} alt="" />

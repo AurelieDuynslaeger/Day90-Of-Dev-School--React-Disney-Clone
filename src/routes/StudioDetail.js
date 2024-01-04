@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "../routes/StudioDetail.css";
+import { Header } from '../components/Header.js';
 
 export default class StudioDetail extends Component {
     state = {
@@ -26,9 +27,7 @@ componentDidMount(){
     })
     return (
         <div className="container">
-        <header>
-          <img src="public\img\logo.png" alt="" srcset="" />
-        </header>
+        <Header/>
           <div className="company-details">
             <div className="company-title">
                 <h2>{this.props.match.params.name}</h2>

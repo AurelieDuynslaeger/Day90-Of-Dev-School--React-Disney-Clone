@@ -3,10 +3,10 @@
   margin: auto;
 }
 
-header img {
+.header img {
   width: 15%;
 }
-header {
+.header {
   text-align: center;
   padding:10px;
 }
@@ -47,6 +47,7 @@ h3 {
 .movie {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .movie li img{
