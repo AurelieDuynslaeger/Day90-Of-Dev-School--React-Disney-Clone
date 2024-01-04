@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "../routes/StudioDetail.css";
 
 export default class StudioDetail extends Component {
     state = {

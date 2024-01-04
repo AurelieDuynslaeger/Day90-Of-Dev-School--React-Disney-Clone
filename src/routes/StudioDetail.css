@@ -1,0 +1,41 @@
+.container {
+  max-width: 80%;
+  margin: auto;
+  
+}
+
+header img {
+  width: 20%;
+}
+
+header {
+  text-align: center;
+}
+
+.company-detail {
+  display: flex;
+  margin: auto;
+}
+
+.company-title {
+  padding: 10px;
+}
+
+.company-list {
+  margin: auto;
+  color: antiquewhite;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company-list li {
+  list-style: none;
+  flex-basis: 15%;
+  margin:10px;
+}
+
+.company-list li img{
+  width:100%;
+  border: 1px solid antiquewhite;
+}
+

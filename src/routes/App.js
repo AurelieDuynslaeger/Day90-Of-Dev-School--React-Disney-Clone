@@ -2,7 +2,7 @@ import { Component } from "react";
 import NewMovie from "../components/NewMovie.js";
 import "../routes/App.css";
 import SuggestMovie from "../components/SuggestMovie.js";
-import { Link } from "react-router-dom/cjs/react-router-dom.js";
+
 
 export default class App extends Component {
 
@@ -59,9 +59,7 @@ export default class App extends Component {
         </div>
         <div className="studios">
           <div className="studio">
-            <Link to={`/company/`}>
               <img src="img\companies\logo-disney.png" alt="" srcset="" />
-              </Link>
           </div>
           <div className="studio">
             <img src="img\companies\logo-marvel.png" alt="" srcset="" />
