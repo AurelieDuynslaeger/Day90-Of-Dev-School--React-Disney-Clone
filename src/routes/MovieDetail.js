@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "../routes/MovieDetail.css";
+import { Tag } from 'antd';
+import { Link } from 'react-router-dom/cjs/react-router-dom.js';
 
 export default class MovieDetail extends Component {
     state = {
@@ -20,13 +23,16 @@ componentDidMount(){
   render() {
     return (
       <div className="container">
+      <header>
+        <img src="public\img\logo.png" alt="" srcset="" />
+        </header>
         <div className="movie-detail">
             <div className="movie-cover">
                 <img src={this.state.movie.poster} alt="" />
             </div>
             <div className="movie-description">
                 <h2>{this.state.movie.title}</h2>
-                <span>{this.state.movie.company}</span>
+                <Tag color="#00b9dc">{this.state.movie.company}</Tag>
                 <p>{this.state.movie.description}</p>
             </div>
         </div>
