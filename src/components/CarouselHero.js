@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import '../routes/App.css'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 const contentStyle = {
   margin: 0,
   height: '350px',
@@ -15,9 +16,9 @@ const CarouselHero = ({ heroMovies }) => {
     <Carousel afterChange={onChange}>
       {heroMovies.map((movie) => (
 
-        <div to={`/movie/${movie.id}`} key={movie.id}>
+        <Link to={`/movie/${movie.id}`} key={movie.id}>
           <img src={movie.cover} alt={movie.title} style={contentStyle} className='carousel-item'/>
-        </div>
+        </Link>
       ))}
     </Carousel>
 

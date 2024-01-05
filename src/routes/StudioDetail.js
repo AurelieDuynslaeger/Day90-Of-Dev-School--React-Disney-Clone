@@ -23,7 +23,7 @@ componentDidMount(){
     this.getCompanyMovies(this.props.match.params.name)
 }
   render() {
-    const logoPath = this.state;
+    const logoPath = this.state.logoPath;
     const listCompany = this.state.movies.map((movie, index) => (
         <Link to={`/movie/${movie.id}`} key={movie.id}>
             <li><img src={movie.poster} alt="" className='movie-poster'/></li>

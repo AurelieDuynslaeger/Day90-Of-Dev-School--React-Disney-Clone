@@ -3,6 +3,7 @@ import "../routes/Details.css";
 import "../routes/App.css";
 import { Tag } from 'antd';
 import { Header } from '../components/Header.js';
+import TrailerModal from '../components/TrailerModal.js';
 
 export default class MovieDetail extends Component {
     state = {
@@ -30,6 +31,7 @@ componentDidMount(){
         <div className="movie-detail">
             <div className="movie-cover">
                 <img src={this.state.movie.poster} alt="" />
+               <TrailerModal/>
             </div>
             <div className="movie-description">
                 <h2>{this.state.movie.title}</h2>
