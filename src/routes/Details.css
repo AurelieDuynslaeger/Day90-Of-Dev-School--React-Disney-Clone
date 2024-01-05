@@ -44,12 +44,18 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
+
  .company-list a {
     margin:15px;
+    flex-basis: 15%;
+  }
+  .company-list a li{
+    list-style: none;
+  }
+
+  .company-list a li img{
+    width: 100%;
     box-shadow: 0px 8px 10px black;
     border: 1px solid white;
   }
-
- 
   
