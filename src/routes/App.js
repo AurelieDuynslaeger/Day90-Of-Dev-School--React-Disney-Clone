@@ -1,10 +1,9 @@
 import { Component } from "react";
 import "../routes/App.css";
-import NewMovie from "../components/NewMovie.js";
-import SuggestMovie from "../components/SuggestMovie.js";
 import { Header } from "../components/Header.js";
 import Studios from "../components/Studios.js";
-import Carousel from "../components/Carousel.js";
+import CarouselHero from "../components/CarouselHero.js";
+import { Link } from "react-router-dom/cjs/react-router-dom.min.js";
 
 
 
@@ -35,8 +34,8 @@ export default class App extends Component {
   async getHeroMovies (){
     const carouselMovies = await fetch("https://elorri.fr/api/disney-plus/movies").then(response => response.json());
 
-    const highlightMovies = carouselMovies.slice(0,3).filter(movie => movie.highlighted ===true);
-
+    const highlightMovies = carouselMovies.filter(movie => movie.highlighted ===true).slice(0,3);
+    console.log("heroMovies:", highlightMovies);
     this.setState({
       heroMovies: highlightMovies
     })
@@ -51,13 +50,13 @@ export default class App extends Component {
   render() {
     const listNewMovies = this.state.newMovies.slice(0,6).map((movie, index) => {
       return (
-        <NewMovie key={movie.id} id={movie.id} img={movie.poster}/>
+        <Link to={`/movie/${movie.id}`}><li><img src={movie.poster} alt="" srcset="" /></li></Link>
       )
     });
 
     const listSuggest = this.state.suggestMovies.slice(0,3).map((movie, index) => {
       return (
-        <SuggestMovie key={movie.id} id={movie.id} img={movie.cover}/>
+        <Link to={`/movie/${movie.id}`}><li><img src={movie.cover} alt="" srcset="" /></li></Link>
       )
     });
 
@@ -66,7 +65,7 @@ export default class App extends Component {
       <div className="container">
         <Header/>
 
-        <Carousel heroMovies={this.state.heroMovies}/>
+        <CarouselHero heroMovies={this.state.heroMovies}/>
         
        <Studios />
         <div className="new">
