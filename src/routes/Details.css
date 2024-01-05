@@ -40,21 +40,16 @@
   
   .company-list {
     margin: auto;
-    color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   
-  .company-list li {
-    list-style: none;
-    flex-basis: 15%;
-    margin:10px;
-  }
-  
-  .company-list li img{
-    width:100%;
-    border: 1px solid white;
+ .company-list a {
+    margin:15px;
     box-shadow: 0px 8px 10px black;
+    border: 1px solid white;
   }
+
+ 
   

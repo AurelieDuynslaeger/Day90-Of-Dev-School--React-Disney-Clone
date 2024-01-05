@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "../routes/Details.css";
 import "../routes/App.css";
 import { Header } from '../components/Header.js';
+import { Link } from 'react-router-dom/cjs/react-router-dom.js';
 
 export default class StudioDetail extends Component {
     state = {
@@ -21,11 +22,11 @@ componentDidMount(){
 }
   render() {
 
-    const listCompany = this.state.movies.map((company)=> {
-        return (
-            <li><img src={company.poster} alt="" /></li>
-        )
-    })
+    const listCompany = this.state.movies.map((movie, index) => (
+        <Link to={`/movie/${movie.id}`} key={movie.id}>
+            <li><img src={movie.poster} alt="" className='movie-poster'/></li>
+        </Link>
+    ))
     return (
         <div className="container">
         <Header/>
@@ -35,7 +36,7 @@ componentDidMount(){
                 <h6>vous présente tout son catalogue</h6>
             </div>
             <div className="company-list">
-                {listCompany}
+                    {listCompany}
             </div>
         </div>
     </div>
