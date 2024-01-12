@@ -49,4 +49,3 @@ L'objectif principal était d'apprendre les concepts clés de celui-ci, notammen
 
 **Note :** Ce projet a été développé dans le cadre de notre apprentissage dans le cursus Developpement Web et Web Mobile chez M2i. Il s'agit d'une application éducative et ne vise pas à violer les droits d'auteur de Disney+.
 
-```
