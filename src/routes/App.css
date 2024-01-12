@@ -70,3 +70,7 @@ h3 {
   object-fit:cover;
   object-position: center;
 }
+
+.company-logo {
+  width:20%;
+}

@@ -1,70 +1,52 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Disney+ Clone Project
 
-## Available Scripts
 
-In the project directory, you can run:
+![Static Badge](https://img.shields.io/badge/Start--Coding_%3A_Jour%2075-7F5A83)
 
-### `npm start`
+![React](https://img.shields.io/badge/React-17.0.2-blue)
+![React Router](https://img.shields.io/badge/React_Router-5.2.0-orange)
+![Ant Design](https://img.shields.io/badge/Ant_Design-4.16.13-green)
+![API](https://img.shields.io/badge/API-External-lightgrey)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ce projet est un clone de l'interface utilisateur de Disney+ développé dans le cadre de notre découverte de React. 
+L'objectif principal était d'apprendre les concepts clés de celui-ci, notamment la collecte de données à partir d'API, la gestion des composants, l'utilisation de React Router pour la navigation, l'intégration d'Ant Design pour améliorer l'expérience utilisateur, et l'utilisation de composants stateful en classe.
 
-### `npm test`
+## Technologies utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: La bibliothèque JavaScript pour construire l'interface utilisateur.
+- **React Router**: Une bibliothèque pour gérer la navigation dans une application React.
+- **Ant Design**: Une bibliothèque de composants React UI.
+- **API externe**
 
-### `npm run build`
+## Fonctionnalités
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Collecte de données à partir d'une API externe.
+- Mise en œuvre de différentes pages pour simuler l'expérience Disney+.
+- Utilisation de composants Ant Design pour une interface utilisateur moderne.
+- Navigation entre les pages avec React Router.
+- Utilisation de composants stateful pour gérer l'état de l'application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instructions d'installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clonez ce dépôt.
+   ```bash
+   git clone [lien du dépôt]
+   ```
 
-### `npm run eject`
+2. Installez les dépendances.
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Lancez l'application.
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Note :** Ce projet a été développé dans le cadre de notre apprentissage dans le cursus Developpement Web et Web Mobile chez M2i. Il s'agit d'une application éducative et ne vise pas à violer les droits d'auteur de Disney+.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```

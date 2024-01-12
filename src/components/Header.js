@@ -1,7 +1,7 @@
 import React from 'react'
 import '../routes/App.css'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import logo from '../assets/logo.png';
+import logo from '../logo.png';
 
 export const Header = () => {
   return (
@@ -10,3 +10,6 @@ export const Header = () => {
     </div>
   )
 }
+
+
+export default Header

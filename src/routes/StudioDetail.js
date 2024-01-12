@@ -15,11 +15,12 @@ async getCompanyMovies(company) {
 
     this.setState({
         movies: dataCompany,
-        logoPath: `../assets/companies/logo-${company.toLowerCase()}.png`
+        logoPath: `${process.env.PUBLIC_URL}/assets/companies/logo-${company.toLowerCase()}.png`
     })
 }
 
 componentDidMount(){
+    
     this.getCompanyMovies(this.props.match.params.name)
 }
   render() {
@@ -34,7 +35,7 @@ componentDidMount(){
         <Header/>
           <div className="company-details">
             <div className="company-title">
-            {logoPath && <img src={logoPath} alt="Studio Logo" className='studio-logo' />}
+            {logoPath && <img src={logoPath} alt="Studio Logo" className='company-logo' />}
                 <h6>vous présente tout son catalogue</h6>
             </div>
             <div className="company-list">
